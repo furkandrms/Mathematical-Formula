@@ -1,4 +1,7 @@
 
+from cmath import sqrt
+
+
 def summation(*number): #Toplama İşlemi Fonksiyonu 
     
     numbers = []
@@ -35,10 +38,6 @@ def divide(a,b):
         
         else:
             return a / b 
-        
-        
-def exponential_number(a,b): #Uslu Ifadeler
-    return a**b    
 
 def absolute_value(a): #Mutlak Değer İşlemi Fonksiyonu 
     
@@ -48,6 +47,40 @@ def absolute_value(a): #Mutlak Değer İşlemi Fonksiyonu
             return a
         else: 
             return a 
+
+             
+def exponential_number(a,b): #Uslu Ifadeler
+    return a**b    
+
+def square_root(x): 
+    return x**0.5
+
+def rooted_expressions(a): 
+    return a**1/a
+
+def equation_second_degree(a,b,c):
+    
+    values = []
+    while True:
+        a = int(input())
+        b = int(input())
+        c = int(input())
+        delta = (b**2 - 4(a*c))
+         
+        if (delta > 0):
+            x1 = ((-b + sqrt(delta))/2*a)
+            x2 = ((-b - sqrt(delta))/2*a)   
+        elif (delta == 0):
+            x1 = x2 = (-b / 2*a)
+        else: 
+            return "it's not any values"
+    return values
+
+         
+         
+    
+
+
 
 
     
