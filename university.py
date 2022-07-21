@@ -1,7 +1,4 @@
 
-from cmath import sqrt
-
-
 def summation(*number): #Toplama İşlemi Fonksiyonu 
     
     numbers = []
@@ -58,23 +55,25 @@ def square_root(x):
 def rooted_expressions(a): 
     return a**1/a
 
-def equation_second_degree(a,b,c):
+def equation_second_degree():
     
-    values = []
-    while True:
-        a = int(input())
-        b = int(input())
-        c = int(input())
-        delta = (b**2 - 4(a*c))
-         
+    a=int(input())
+    b=int(input())
+    c=int(input())
+     
+    while True: 
+        
+        delta = (b**2 -4*(a*c))
         if (delta > 0):
-            x1 = ((-b + sqrt(delta))/2*a)
-            x2 = ((-b - sqrt(delta))/2*a)   
-        elif (delta == 0):
-            x1 = x2 = (-b / 2*a)
-        else: 
-            return "it's not any values"
-    return values
+            x1 = (-b + (delta**0.5))/2*a
+            x2 = (-b- (delta**0.5))/2*a
+            return x1,x2
+        elif delta == 0:
+            x1 = (-b/2*a)
+            return x1
+        else:
+            print("It's not values in this equation")
+        return equation_second_degree
 
          
          
