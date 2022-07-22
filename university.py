@@ -86,7 +86,32 @@ def arithmetic_average(*x):
             sum += i
         sum /= len(values) 
         return sum
-    return values 
+    return values
+
+def measure(): 
+    x = int(input())
+    y = input()
+    
+    for i in y:
+        x *= 100 
+        if ( y == "inch"):
+            
+            x /= 2.54
+            return x
+        elif ( y == "foot"):
+            x /= (2.54*12)
+            return x
+        elif ( y == "yard"):
+            x /= (2.54*12*3)
+            return x
+        elif (y == "mil"):
+            x /= (2.54*12*3*1760)
+            return x
+        else:
+            return x, print("centimeter")
+        return y
+    return measure()
+             
 
             
     
