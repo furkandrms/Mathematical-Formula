@@ -79,11 +79,12 @@ def arithmetic_average(*x):
     
     sum = 0
     values = [] 
+    
     while True:
         for i in (x): 
             values.append(i)
             sum += i
-        sum = sum / len(values) 
+        sum /= len(values) 
         return sum
     return values 
 
