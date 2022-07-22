@@ -75,19 +75,18 @@ def equation_second_degree():
             print("It's not values in this equation")
         return equation_second_degree
 
-def arithmetic_average(*x):
+def arithmetic_average(*x): 
     
-    numbers = []
-    equal = 0 
-    
-    while True: 
-        for i in x: 
-            i += 1
-            numbers.append(i)
-            equal += i
-            return numbers
-        return equal
-    return equal / len(numbers)
+    sum = 0
+    values = [] 
+    while True:
+        for i in (x): 
+            values.append(i)
+            sum += i
+        sum = sum / len(x) 
+        return sum
+    return values 
+
             
     
            
