@@ -88,7 +88,7 @@ def arithmetic_average(*x):
         return sum
     return values
 
-def measure(): 
+def measure_meter(): 
     x = int(input())
     y = input()
     
